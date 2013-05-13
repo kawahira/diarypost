@@ -11,7 +11,7 @@ function postAnnouncement() {
   var cal        = CalendarApp.getCalendarById(calenderid);
   var events     = cal.getEventsForDay( datetime );
   if (events.length > 0) {
-    var html       = '本日の予定は' + events.length + '件でした。<br><br>'
+    var html     = '本日の予定は' + events.length + '件でした。<br><br>';
     for (var i in events ) {
       var evt   = events[i];
       var start = Utilities.formatDate(evt.getStartTime(),timezone,timeformat);
